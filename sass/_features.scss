@@ -1,0 +1,32 @@
+
+.features {
+ 
+  grid-column:main-start/main-end;
+ 
+  display:grid;
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr)); //autofit-creates as many gridtracts as needed based on the width we defind. 
+  //no need grid row kay automatic na sya.thats the default
+  margin:15rem 0;
+  grid-gap: 6rem;
+  align-items: start;//text sa sulod sa box
+}
+
+.feature{
+
+  display: grid;//displaying icon and H4 side by side
+  grid-template-columns:min-content 1fr;//first col adjustable sya and 2nd 1fr(rest sa space)No rows needed,content definds the row.
+  grid-row-gap: 1.5rem;
+  grid-column-gap: 2.5rem;
+
+  &__icon{
+    fill:$color-primary;//changing color of a svg font
+    width: 4.5rem;
+    height: 4.5rem;
+    grid-row: 1/span 2;
+    transform: translateY(-1rem);
+
+  }
+  &__text{
+    font-size: 1.7rem;
+  }
+}
